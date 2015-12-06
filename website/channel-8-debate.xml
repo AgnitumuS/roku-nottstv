@@ -1,0 +1,7 @@
+<?
+
+$out = file_get_contents("http://api.brightcove.com/services/library?command=search_videos&amp;token=1N4JCL3KisuyvNlDIPdrJGpatQ1dVXuaCRtD88vFyCqx6Va1G_yGtg..&amp;video_fields=id,name,videoStillURL,tags&amp;sort_by=start_date:desc&amp;any=custom_fields:{$stag}&amp;output=mrss&amp;");
+
+$out = str_replace("0x14","",$out);
+echo $out;
+?>
